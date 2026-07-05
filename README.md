@@ -4,8 +4,6 @@ Sistema web em Java/Spring Boot para controle de estoque, clientes e vendas de u
 
 O projeto foi criado como uma versão inicial para a disciplina de Imersão Profissional: Implementação de uma Aplicação. A proposta é resolver uma necessidade comum em lojas de autopeças: registrar produtos, acompanhar estoque mínimo, cadastrar clientes e registrar vendas com baixa automática no estoque.
 
-Repositório: https://github.com/Elineison/gestao-autopecas-java
-
 ## Funcionalidades
 
 - Cadastro de produtos.
