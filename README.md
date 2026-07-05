@@ -98,15 +98,6 @@ src/main/resources/static
 └── app.js
 ```
 
-## Documentação acadêmica
-
-Os textos de apoio do trabalho estão na pasta `docs/`:
-
-- `PAPER.md`: texto base do paper.
-- `PPT_SOCIALIZACAO.md`: roteiro dos slides.
-- `ROTEIRO_APRESENTACAO_ORAL.md`: apoio para a apresentação.
-- `PRINTS_E_EVIDENCIAS.md`: prints e trechos de código sugeridos.
-
 ## Autor
 
 Elineison Inácio
