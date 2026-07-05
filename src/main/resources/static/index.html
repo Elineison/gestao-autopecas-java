@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestão AutoPeças</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <span class="eyebrow">Gestão comercial</span>
+        <h1>Gestão AutoPeças</h1>
+        <p>Controle de estoque, clientes e vendas para lojas de autopeças.</p>
+      </div>
+      <button id="refreshButton" type="button">Atualizar</button>
+    </header>
+
+    <section class="metrics">
+      <article>
+        <span>Produtos</span>
+        <strong id="metricProducts">0</strong>
+      </article>
+      <article>
+        <span>Clientes</span>
+        <strong id="metricClients">0</strong>
+      </article>
+      <article>
+        <span>Vendas</span>
+        <strong id="metricSales">0</strong>
+      </article>
+      <article>
+        <span>Reposição</span>
+        <strong id="metricRestock">0</strong>
+      </article>
+    </section>
+
+    <section class="grid">
+      <form id="productForm" class="panel">
+        <h2>Cadastrar produto</h2>
+        <label>Nome<input id="productName" required placeholder="Filtro de óleo"></label>
+        <label>Código<input id="productCode" required placeholder="FT-010"></label>
+        <label>Categoria
+          <select id="productCategory">
+            <option>MOTOR</option>
+            <option>FREIO</option>
+            <option>SUSPENSAO</option>
+            <option>ELETRICA</option>
+            <option>FILTROS</option>
+            <option>ACESSORIOS</option>
+          </select>
+        </label>
+        <div class="two">
+          <label>Preço<input id="productPrice" required type="number" min="0.01" step="0.01" value="59.90"></label>
+          <label>Estoque<input id="productStock" required type="number" min="0" value="10"></label>
+        </div>
+        <label>Estoque mínimo<input id="productMinStock" required type="number" min="0" value="3"></label>
+        <button type="submit">Salvar produto</button>
+      </form>
+
+      <form id="clientForm" class="panel">
+        <h2>Cadastrar cliente</h2>
+        <label>Nome<input id="clientName" required placeholder="Oficina Central"></label>
+        <label>Documento<input id="clientDocument" required placeholder="12.345.678/0001-90"></label>
+        <label>Telefone<input id="clientPhone" required placeholder="(85) 99999-0000"></label>
+        <label>E-mail<input id="clientEmail" required type="email" placeholder="compras@oficina.com"></label>
+        <button type="submit">Salvar cliente</button>
+      </form>
+
+      <form id="saleForm" class="panel">
+        <h2>Registrar venda</h2>
+        <label>Cliente<select id="saleClient"></select></label>
+        <label>Produto<select id="saleProduct"></select></label>
+        <label>Quantidade<input id="saleQuantity" required type="number" min="1" value="1"></label>
+        <button type="submit">Registrar venda</button>
+        <p id="message" class="message"></p>
+      </form>
+    </section>
+
+    <section class="tables">
+      <div class="panel wide">
+        <div class="section-title">
+          <h2>Estoque</h2>
+          <span>Produtos com alerta aparecem destacados.</span>
+        </div>
+        <div id="productList" class="list"></div>
+      </div>
+
+      <div class="panel wide">
+        <div class="section-title">
+          <h2>Vendas recentes</h2>
+          <span>Baixa automática no estoque.</span>
+        </div>
+        <div id="saleList" class="list"></div>
+      </div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

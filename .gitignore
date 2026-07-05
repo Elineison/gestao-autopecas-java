@@ -1,0 +1,13 @@
+target/
+.idea/
+.vscode/
+*.iml
+
+# Arquivos gerados para entrega final local
+entrega/
+modelo-paper-uniasselvi.docx
+template-socializacao-uniasselvi.pptx
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
